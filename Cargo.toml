@@ -1,10 +1,13 @@
 [package]
 name = "core-video-sys"
 version = "0.1.4"
-authors = ["luozijun <luozijun.assistant@gmail.com>", "michael.laifx <cihv2@163.com>"]
+authors = [
+    "luozijun <luozijun.assistant@gmail.com>",
+    "michael.laifx <cihv2@163.com>",
+]
 description = "Bindings to CoreVideo.framework for macOS and iOS"
 license = "MIT"
-homepage   = "https://github.com/luozijun/rust-core-video-sys"
+homepage = "https://github.com/luozijun/rust-core-video-sys"
 repository = "https://github.com/luozijun/rust-core-video-sys"
 documentation = "https://docs.rs/core-video-sys/*/x86_64-apple-darwin/core-video-sys"
 edition = "2018"
@@ -16,7 +19,7 @@ objc = "0.2"
 core-foundation-sys = "0.8"
 
 [dependencies.metal]
-version = "0.20"
+version = "0.21"
 features = ["private"]
 optional = true
 
@@ -25,11 +28,10 @@ version = "0.22"
 optional = true
 
 [features]
-default = [ "display_link", "metal" ]
-all = [ "display_link", "direct3d", "io_suface", "opengl" ]
+default = ["display_link", "metal"]
+all = ["display_link", "direct3d", "io_suface", "opengl"]
 
-display_link = [ "opengl", "core-graphics" ]
-direct3d  = [ ]
-io_suface = [ ]
-opengl    = [ ]
-
+display_link = ["opengl", "core-graphics"]
+direct3d = []
+io_suface = []
+opengl = []
